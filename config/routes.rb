@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
 
   post "/sessions" => "sessions#create"
-  
+
+  patch "/users/:id" => "users#update"
+
 end

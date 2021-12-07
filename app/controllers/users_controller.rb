@@ -14,4 +14,12 @@ class UsersController < ApplicationController
     end
   end
   
+  def update
+    user = User.find_by(email: params[:email])
+    user.update!(
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
+    )
+  end
+
 end
